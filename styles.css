@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 3rem 12rem;
+    text-align: center;
+}
+
+header>h1 {
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.top-container {
+    margin-bottom: 2rem;
+}
+
+.top-container>input {
+    width: 180px;
+    height: 40px;
+    border: 1px solid #E4C9C5;
+    outline: none;
+    padding-left: 0.75rem;
+}
+
+.top-container>input::placeholder {
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+.btn {
+    width: 120px;
+    height: 40px;
+    background-color: #E4C9C5;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.error-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: red;
+    margin-top: 2rem;
+}
+
+.grid-container {
+    background-color: #E4C9C5;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, 1fr));
+    text-align: left;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.name-container {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    row-gap: 0.5rem;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: gray;
+    opacity: 75%;
+}
+
+.country {
+    grid-column: 2/3;
+}
+
+.score {
+    grid-column: 3/4;
+}
+
+.container-of-icons {
+    grid-column: 4/5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.circular-icon {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.change-score {
+    display: flex;
+    gap: 1rem;
+}
+
+/* UTILITY CLASSES */
+
+.invisible {
+    display: none;
+}
+
+@media only screen and (max-width:1000px) {
+    body {
+        padding: 2rem 6rem;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    body {
+        padding: 2rem 2.5rem;
+    }
+
+    .top-container>input {
+        width: 130px;
+        height: 40px;
+        margin-bottom: 0.5rem;
+        padding-left: 0.25rem;
+    }
+
+    .grid-container {
+        font-size: 0.9rem;
+        letter-spacing: normal;
+        gap: 1rem;
+    }
+
+    .name-container {
+        margin-left: 0;
+    }
+
+    .date {
+        font-size: 0.75rem;
+    }
+    
+    .container-of-icons {
+        gap: 0.25rem;
+    }
+
+    .circular-icon {
+        width: 35px;
+        height: 35px;
+        aspect-ratio: 1;
+        padding: 1rem;
+    }
+}
